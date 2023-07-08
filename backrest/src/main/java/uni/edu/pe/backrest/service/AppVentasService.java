@@ -4,8 +4,8 @@ import uni.edu.pe.backrest.dto.*;
 
 import java.util.List;
 
-public interface TiendaService {
-    Cliente registrarUsuario(Cliente cliente);
+public interface AppVentasService {
+    Usuario registrarUsuario(Usuario usuario);
     Pedido registrarPedido(Pedido pedido);
 
     DetallePedido registrarDetallePedido(DetallePedido detallePedido);

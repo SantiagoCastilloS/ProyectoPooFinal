@@ -3,19 +3,19 @@ package uni.edu.pe.backrest.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import uni.edu.pe.backrest.dao.TiendaDao;
+import uni.edu.pe.backrest.dao.AppVentasDao;
 import uni.edu.pe.backrest.dto.*;
 
 import java.util.List;
 @Transactional
 @Service
-public class TiendaServiceImp implements TiendaService{
+public class AppVentasServiceImp implements AppVentasService {
     @Autowired
-    private TiendaDao dao;
+    private AppVentasDao dao;
 
     @Override
-    public Cliente registrarUsuario(Cliente cliente) {
-        return dao.registrarUsuario(cliente);
+    public Usuario registrarUsuario(Usuario usuario) {
+        return dao.registrarUsuario(usuario);
     }
 
     @Override

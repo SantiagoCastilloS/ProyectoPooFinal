@@ -26,7 +26,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   obtenerProductos(): Observable<RespuestaProducto> {
-    return this.http.post<RespuestaProducto>('http://localhost:8082/obtenerProductos', null,
+    return this.http.post<RespuestaProducto>('http://localhost:8080/obtenerProductos', null,
       this.httpOptions)
       .pipe(
         retry(1),
@@ -35,7 +35,7 @@ export class ApiService {
   }
 
   registrarUsuario(data: Cliente): Observable<Cliente> {
-    return this.http.post<Cliente>('http://localhost:8082/registrarUsuario', data,
+    return this.http.post<Cliente>('http://localhost:8080/registrarUsuario', data,
       this.httpOptions)
       .pipe(
         retry(1),
@@ -43,7 +43,7 @@ export class ApiService {
       );
   }
   registrarCompra(data: Compra): Observable<Compra> {
-    return this.http.post<Compra>('http://localhost:8082/registrarCompra', data,
+    return this.http.post<Compra>('http://localhost:8080/registrarCompra', data,
       this.httpOptions)
       .pipe(
         retry(1),

@@ -49,4 +49,5 @@ export class DetalleproductoComponent implements OnInit{
     })
   }
 
+
 }

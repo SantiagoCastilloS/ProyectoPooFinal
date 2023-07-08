@@ -3,37 +3,35 @@ export interface Producto{
   nombreP: string;
   descripcion: string;
   precio: number;
-  marca: Marca;
+  vendedor: Vendedor;
   categoria: Categoria;
-  imagen: Imagen;
+  urlImagen: string;
 }
 export interface RespuestaProducto{
   listaProductos: Producto[];
 }
 
-export interface Marca{
-  idMarca: number;
-  nombreM: string;
+export interface Vendedor{
+  idVendedor: number;
+  nombreVendedor: string;
+  descripcionVendedor: string;
+  direccionVendedor: string;
+  telefonoVendedor: string;
+  emailVendedor: string;
+  valoracionVendedor: number;
+  nroVentas: number;
 }
 export interface Categoria{
   idCategoria: number;
   nombreC: string;
 }
-export interface Imagen{
-  idImagen: number;
-  nombreI: string;
-  urlImg: string;
-}
 
 export interface Cliente{
   nombre: string;
-  apellPat: string;
-  apellMat: string;
-  direccion: string;
-  telefono: number;
   email: string;
-  usuario: string;
-  pass: string;
+  contra: string;
+  telefono: string;
+  dni: string;
 }
 
 export interface Compra{

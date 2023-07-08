@@ -9,13 +9,11 @@ import {Cliente} from "../../interfaces";
 })
 export class RegistroComponent implements OnInit{
   nombre: string = "";
-  apellPat: string = "";
-  apellMat: string = "";
-  direccion: string = "";
-  telefono: number = 0;
   email: string = "";
-  usuario: string = "";
-  pass: string = "";
+  contra: string = "";
+  telefono: string = "";
+  dni: string = "";
+
   constructor(private api: ApiService) {
   }
   ngOnInit() {
@@ -23,23 +21,17 @@ export class RegistroComponent implements OnInit{
 
   registrar() {
     console.log(this.nombre);
-    console.log(this.apellPat);
-    console.log(this.apellMat);
-    console.log(this.direccion);
-    console.log(this.telefono);
     console.log(this.email);
-    console.log(this.usuario);
-    console.log(this.pass);
+    console.log(this.contra);
+    console.log(this.telefono);
+    console.log(this.dni);
 
     const cliente: Cliente ={
       nombre: this.nombre,
-      apellPat: this.apellPat,
-      apellMat: this.apellMat,
-      direccion: this.direccion,
-      telefono: this.telefono,
       email: this.email,
-      usuario: this.usuario,
-      pass: this.pass
+      contra: this.contra,
+      telefono: this.telefono,
+      dni: this.dni
     }
 
     this.api.registrarUsuario(cliente).subscribe(data =>{

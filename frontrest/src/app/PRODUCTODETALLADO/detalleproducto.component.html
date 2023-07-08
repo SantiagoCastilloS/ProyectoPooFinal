@@ -1,0 +1,21 @@
+<div id="main-container">
+  <div *ngIf ="producto!=null" style="width:30%; padding: 20px" id="inner-div">
+    <div class="border-4 border-indigo-500/50 shadow-2xl">
+      <div class="text-center mb-4 text-3xl font-serif" style="color: black">PRODUCTO DETALLADO</div>
+      <div class="flex justify-center bg-contain bg-center">
+        <img [src]="producto.urlImagen" class="h-auto margen">
+      </div>
+      <div class="border-4 border-indigo-500/50 font-serif" style="color: black">PRODUCTO: {{producto.nombreP}}</div>
+      <div class="border-4 border-indigo-500/50 font-serif" style="color: black">Categoria: {{producto.categoria.nombreC}}</div>
+      <div class="border-4 border-indigo-500/50 font-serif" style="color: black">DESCRIPCION: {{producto.descripcion}}</div>
+      <div class="border-4 border-indigo-500/50 font-serif" style="color: black">Precio del producto: S/{{producto.precio}}</div>
+      <div style="color: black">Cantidad: <input type="text"  class="border text-black" [(ngModel)]="cantidad"></div>
+    </div>
+  </div>
+</div>
+<div id="main-container2">
+  <div class="rounded-lg font-serif bg-amber-600 border-amber-600 text-white shadow-2xl w-60 grid justify-items-center">
+    <button type="button" onclick="alert('Pedido realizado')" (click)="registrarC()" style="color: black">Confirmar la compra</button>
+  </div><br>
+</div>
+

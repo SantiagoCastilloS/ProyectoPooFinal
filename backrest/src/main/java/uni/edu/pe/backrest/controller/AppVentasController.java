@@ -3,21 +3,19 @@ package uni.edu.pe.backrest.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import uni.edu.pe.backrest.dto.*;
-import uni.edu.pe.backrest.service.TiendaService;
+import uni.edu.pe.backrest.service.AppVentasService;
 
 import java.util.List;
 @CrossOrigin(origins = {"*"})
 @RestController
-public class TiendaController {
+public class AppVentasController {
     @Autowired
-    private TiendaService service;
+    private AppVentasService service;
     @RequestMapping(value="/registrarUsuario",
             method = RequestMethod.POST)
-    public Cliente registrarUsuario(@RequestBody Cliente cliente){
-        return service.registrarUsuario(cliente);
+    public Usuario registrarUsuario(@RequestBody Usuario usuario){
+        return service.registrarUsuario(usuario);
     }
-
-
     @RequestMapping(value="/obtenerProductos",
             method = RequestMethod.POST)
     public @ResponseBody RespuestaProducto obtenerProductos(){
